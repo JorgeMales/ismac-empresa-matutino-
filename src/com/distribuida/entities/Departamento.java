@@ -13,76 +13,83 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = "departamento")
 public class Departamento {
-	//Atributos
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_departamento")
-	private int idDepartamento;
-	@Column(name = "NombreDpto")
-	private String NombreDpto;
-	@Column(name = "NumeroDpto")
-	private int NumeroDpto;
-	@Column(name = "DniDirector")
-	private String DniDirector;
-	@Column(name = "FechaIngresoDirector")
-	private String FechaIngreso;
 
-	public Departamento() {}
+    // Atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_departamento")
+    private int idDepartamento;
 
-	public Departamento(int idDepartamento, String nombreDpto, int numeroDpto, String dniDirector, String fechaIngreso) {
-		super();
-		this.idDepartamento = idDepartamento;
-		this.NombreDpto = nombreDpto;
-		this.NumeroDpto = numeroDpto;
-		this.DniDirector = dniDirector;
-		this.FechaIngreso = fechaIngreso;
-	}
-	
+    @Column(name = "NombreDpto")
+    private String nombreDpto;
 
-	public int getIdDepartamento() {
-		return idDepartamento;
-	}
+    @Column(name = "NumeroDpto")
+    private int numeroDpto;
 
-	public void setIdDepartamento(int idDepartamento) {
-		this.idDepartamento = idDepartamento;
-	}
+    @Column(name = "DniDirector")
+    private String dniDirector;
 
-	public String getNombreDpto() {
-		return NombreDpto;
-	}
+    @Column(name = "FechaIngresoDirector")
+    private String fechaIngresoDirector;
 
-	public void setNombreDpto(String nombreDpto) {
-		NombreDpto = nombreDpto;
-	}
+    // Constructor sin parámetros
+    public Departamento() {}
 
-	public int getNumeroDpto() {
-		return NumeroDpto;
-	}
+    // Constructor con parámetros
+    public Departamento(int idDepartamento, String nombreDpto, int numeroDpto, String dniDirector, String fechaIngresoDirector) {
+        super();
+        this.idDepartamento = idDepartamento;
+        this.nombreDpto = nombreDpto;
+        this.numeroDpto = numeroDpto;
+        this.dniDirector = dniDirector;
+        this.fechaIngresoDirector = fechaIngresoDirector;
+    }
 
-	public void setNumeroDpto(int numeroDpto) {
-		NumeroDpto = numeroDpto;
-	}
+    // Getters y setters
+    public int getIdDepartamento() {
+        return idDepartamento;
+    }
 
-	public String getDniDirector() {
-		return DniDirector;
-	}
+    public void setIdDepartamento(int idDepartamento) {
+        this.idDepartamento = idDepartamento;
+    }
 
-	public void setDniDirector(String dniDirector) {
-		DniDirector = dniDirector;
-	}
+    public String getNombreDpto() {
+        return nombreDpto;
+    }
 
-	public String getFechaIngreso() {
-		return FechaIngreso;
-	}
+    public void setNombreDpto(String nombreDpto) {
+        this.nombreDpto = nombreDpto;
+    }
 
-	public void setFechaIngreso(String fechaIngreso) {
-		FechaIngreso = fechaIngreso;
-	}
+    public int getNumeroDpto() {
+        return numeroDpto;
+    }
 
-	@Override
-	public String toString() {
-		return "Departamento [idDepartamento=" + idDepartamento + ", NombreDpto=" + NombreDpto + ", NumeroDpto="
-				+ NumeroDpto + ", DniDirector=" + DniDirector + ", FechaIngreso=" + FechaIngreso + "]";
-	}
-	
+    public void setNumeroDpto(int numeroDpto) {
+        this.numeroDpto = numeroDpto;
+    }
+
+    public String getDniDirector() {
+        return dniDirector;
+    }
+
+    public void setDniDirector(String dniDirector) {
+        this.dniDirector = dniDirector;
+    }
+
+    public String getFechaIngresoDirector() {
+        return fechaIngresoDirector;
+    }
+
+    public void setFechaIngresoDirector(String fechaIngresoDirector) {
+        this.fechaIngresoDirector = fechaIngresoDirector;
+    }
+
+    @Override
+    public String toString() {
+        return "Departamento [idDepartamento=" + idDepartamento + ", nombreDpto=" + nombreDpto + ", numeroDpto="
+                + numeroDpto + ", dniDirector=" + dniDirector + ", fechaIngresoDirector=" + fechaIngresoDirector + "]";
+    }
+
 }
