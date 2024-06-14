@@ -19,16 +19,12 @@ public class Departamento {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_departamento")
     private int idDepartamento;
-
     @Column(name = "NombreDpto")
     private String nombreDpto;
-
     @Column(name = "NumeroDpto")
     private int numeroDpto;
-
     @Column(name = "DniDirector")
     private String dniDirector;
-
     @Column(name = "FechaIngresoDirector")
     private String fechaIngresoDirector;
 

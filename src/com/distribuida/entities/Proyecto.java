@@ -7,17 +7,18 @@ public class Proyecto {
 	private int NumProyecto;
 	private String UbicacionProyecto;
 	private int NumDptoProyecto;
+	private LocalizacionesDpto localizacionesdpto;
 	
 	public Proyecto () {}
 
 	public Proyecto(int idProyecto, String nombreProyecto, int numProyecto, String ubicacionProyecto,
-			int numDptoProyecto) {
-		
+			int numDptoProyecto, LocalizacionesDpto localizacionesdpto) {
 		this.idProyecto = idProyecto;
 		this.NombreProyecto = nombreProyecto;
 		this.NumProyecto = numProyecto;
 		this.UbicacionProyecto = ubicacionProyecto;
 		this.NumDptoProyecto = numDptoProyecto;
+		this.localizacionesdpto = localizacionesdpto;
 	}
 
 	public int getIdProyecto() {
@@ -60,16 +61,21 @@ public class Proyecto {
 		NumDptoProyecto = numDptoProyecto;
 	}
 
+	public LocalizacionesDpto getLocalizacionesdpto() {
+		return localizacionesdpto;
+	}
+
+	public void setLocalizacionesdpto(LocalizacionesDpto localizacionesdpto) {
+		this.localizacionesdpto = localizacionesdpto;
+	}
+
 	@Override
 	public String toString() {
 		return "Proyecto [idProyecto=" + idProyecto + ", NombreProyecto=" + NombreProyecto + ", NumProyecto="
 				+ NumProyecto + ", UbicacionProyecto=" + UbicacionProyecto + ", NumDptoProyecto=" + NumDptoProyecto
-				+ "]";
+				+ ", localizacionesdpto=" + localizacionesdpto + "]";
 	}
-	
-	
-	
-	
+
 	
 
 }

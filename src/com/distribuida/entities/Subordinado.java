@@ -7,18 +7,20 @@ public class Subordinado {
     private String Sexo;
     private String FechaNac;
     private String Relacion;
-    
-    
-    
+    private Empleado empleado;
+   
+
 	public Subordinado(int idSubordinado, int dniEmpleado, String nombreSubordinado, String sexo, String fechaNac,
-			String relacion) {
+			String relacion, Empleado empleado) {
 		this.idSubordinado = idSubordinado;
-		DniEmpleado = dniEmpleado;
-		NombreSubordinado = nombreSubordinado;
-		Sexo = sexo;
-		FechaNac = fechaNac;
-		Relacion = relacion;
+		this.DniEmpleado = dniEmpleado;
+		this.NombreSubordinado = nombreSubordinado;
+		this.Sexo = sexo;
+		this.FechaNac = fechaNac;
+		this.Relacion = relacion;
+		this.empleado = empleado;
 	}
+
 
 
 	public int getIdSubordinado() {
@@ -93,14 +95,26 @@ public class Subordinado {
 
 
 
+	public Empleado getEmpleado() {
+		return empleado;
+	}
+
+
+
+	public void setEmpleado(Empleado empleado) {
+		this.empleado = empleado;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "Subordinado [idSubordinado=" + idSubordinado + ", DniEmpleado=" + DniEmpleado + ", NombreSubordinado="
-				+ NombreSubordinado + ", Sexo=" + Sexo + ", FechaNac=" + FechaNac + ", Relacion=" + Relacion + "]";
+				+ NombreSubordinado + ", Sexo=" + Sexo + ", FechaNac=" + FechaNac + ", Relacion=" + Relacion
+				+ ", empleado=" + empleado + "]";
 	}
-    
-    
-    
+
+
 
 
 }
