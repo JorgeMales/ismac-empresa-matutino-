@@ -43,7 +43,6 @@ public Empleado() {}
 
 public Empleado(int idEmpleado, String nombre, String apellido1, String apellido2, int dni, String fechaNac,
 		String direccion, String sexo, int sueldo, int superDni, int dno) {
-	super();
 	this.idEmpleado = idEmpleado;
 	this.nombre = nombre;
 	this.apellido1 = apellido1;

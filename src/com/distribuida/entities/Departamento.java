@@ -37,7 +37,6 @@ public class Departamento {
 
     // Constructor con parámetros
     public Departamento(int idDepartamento, String nombreDpto, int numeroDpto, String dniDirector, String fechaIngresoDirector) {
-        super();
         this.idDepartamento = idDepartamento;
         this.nombreDpto = nombreDpto;
         this.numeroDpto = numeroDpto;

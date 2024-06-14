@@ -7,6 +7,7 @@ import javax.transaction.Transactional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.distribuida.entities.Departamento;
 
@@ -17,6 +18,7 @@ public class DepartamentoDAOImpl implements DepartamentoDAO{
 	private SessionFactory sessionFactory;
 
 	@Override
+	@Transactional
 	public List<Departamento> findAll() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();

@@ -12,7 +12,6 @@ public class Subordinado {
     
 	public Subordinado(int idSubordinado, int dniEmpleado, String nombreSubordinado, String sexo, String fechaNac,
 			String relacion) {
-		super();
 		this.idSubordinado = idSubordinado;
 		DniEmpleado = dniEmpleado;
 		NombreSubordinado = nombreSubordinado;
